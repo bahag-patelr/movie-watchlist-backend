@@ -109,8 +109,8 @@ resource "google_cloud_run_v2_service_iam_member" "movies_watchlist_service_rish
 
 # GitHub Actions Service Account
 resource "google_service_account" "github_actions" {
-  account_id   = "github-actions"
-  display_name = "GitHub Actions"
+  account_id   = "bahag-patelr"
+  display_name = "GitHub Actions account"
 }
 
 resource "google_project_iam_member" "github_actions_run_admin" {
