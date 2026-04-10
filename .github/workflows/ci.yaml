@@ -65,6 +65,6 @@ jobs:
         run: |
           terraform apply -auto-approve \
             -var="project_id=${{ secrets.GCP_PROJECT_ID }}" \
-            -var="db_password=${{ secrets.DB_PASSWORD }}" \
+            -var="db_password=${{ secrets.DB_PASS }}" \
             -var="jwt_secret=${{ secrets.JWT_SECRET }}" \
             -var="tmdb_bearer_token=${{ secrets.TMDB_BEARER_TOKEN }}"

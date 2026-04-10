@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "sandbox-project-443508",
+  "private_key_id": "a32c5e60a9508af29d6786c829a06e7171826eeb",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDNfxiLhSt7j89q\nCyiknwxtbW7LUXjAWIcmdYe9nPffqjzc7AnfkR7+GX8xRq5DeTlQJjtP0vTQlEWN\nrGAmVFd3eqOlWzoBYUpxbqNyd1NmeZH9iHzFZljcsnyivcBz2QX+AESCoyDPyfxa\nMTWIXXQnE3/viIMmIDF+iysKb5acriI9vUt6npaf6eWNMqLCUDKoIcjrXgNh0BZO\ntA3FWwkACrRtJtRYUqzN+EfCM+Mw+6aLA94irSHPvtRq9FXpxf7Ql4G8S8H4oF8t\neemFiSI7IEBQ7UmrHdIn8xhqJtZLb1FtdbxgUPz+XsT8KdyFcCY4bc08PGqWdtBR\nXuowYgqbAgMBAAECggEABQyVWN0k9fqmVKCkyPOYmS9+jUA9KZUqYdaWONpqxzB/\nIZAOfO/WEA5fUqGvyzwRq5r7GYssA4bedROiIrfZ6hrnewIip1aVIp60CNkHni52\n2Mf4PqL8FhUFSxFDDgPd7W+cIuKzxTAkYz8oLLz4btBAO1EUMvpzaVH0n5xML3aI\n0Iei61B/j5hT9DrGjcT+E9PLR9FLbP1M6TrCsi03wHjZrKKqeRF8mJun+XngQxd9\ne+3jBEWNFqHB1KctqyCH0DvoFsuYM674k6eSWN94y6ZA7LTCfJGMCOFZ9f9hrc+9\nh02LDxxloIWasNVDUSMIKmkXGBQjSjWmy9pWW3rgsQKBgQDnN9axeR/aPfIGKGPm\n1hp4WIxH8xFysMV6p77dlCWWfB7jXletvYVDTk2HQkjH8eL8JQicj6q9orZI6mN3\nUreuLAjZt5W7nT8zOsOrYtx6QPPqdCcsjp83dbr/1ptdRn+kQe7PiQUwXE4AYBTg\nU1xiV8ZhXGkUnve6sBmjzDQp8QKBgQDjhYG4URg/7DxSpzBYnZip1QyoreBQoYXQ\nkdbclFG6/QCp6n/EkN0iOc8HuAR6iq1aCd+w1Y7D7DZWNuU8celcpdaYifNCNB6i\nDKMcq56Ig/bzbzePALQH/y7Wsd97jMddjNQNRA2r5XZUmfg4sbMKUHa2GXHpWwSC\ny3DIuJzRSwKBgC8x3ZeyEodYd4s8OVAHybVg1ZlmCtyvKk/j53iQ4a86vI9KVXk4\nIvhfBkIijHqLa/ptkLlsNbypdq2hchYMA0QA5vmRmHWIHjtVtlTIRBqMIX1sogZd\nQjBuznGkG2hJmIotjxI7dJyvaph3BCvZuBS2t95tn2E/JW+svD8L0mXxAoGBAICH\nBNa4iPhjXVhbtgX5USpvfi0zvEoQVOWT3UrSRrFZByz1maPTKfiRq5BytaT7/h2l\nAkaE/ZdUMwXVEP5qYyfBT07wbwjxJHTqqqIhmPcJhVHTfBE+lnUGBNGnvdWvm1gP\nnCK6VPbMM2JrcDumtruW5NjN2vm2PwAcKORa1cutAoGBAJs+QTonsawhNCzlm9+P\n7vC2fmJ0UV943JuEKGIF0C7rh/b5d8AMHTLijd1wtwAISYtweiOCGv9zBTlsyORL\n7qODXH2DsU3uVxOq+JDp81qkrJC95N7uw1n2FwSlxdiEIt8zIRrawe8RseFqL1O+\nHsNhzSAz0DLk4Ty61UUXhkgT\n-----END PRIVATE KEY-----\n",
+  "client_email": "bahag-patelr@sandbox-project-443508.iam.gserviceaccount.com",
+  "client_id": "109820702521011319402",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/bahag-patelr%40sandbox-project-443508.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
