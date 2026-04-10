@@ -106,3 +106,39 @@ resource "google_cloud_run_v2_service_iam_member" "movies_watchlist_service_rish
   role     = "roles/run.invoker"
   member   = "allUsers"
 }
+
+# GitHub Actions Service Account
+resource "google_service_account" "github_actions" {
+  account_id   = "github-actions"
+  display_name = "GitHub Actions"
+}
+
+resource "google_project_iam_member" "github_actions_run_admin" {
+  project = var.project_id
+  role    = "roles/run.admin"
+  member  = "serviceAccount:${google_service_account.github_actions.email}"
+}
+
+resource "google_project_iam_member" "github_actions_registry_writer" {
+  project = var.project_id
+  role    = "roles/artifactregistry.writer"
+  member  = "serviceAccount:${google_service_account.github_actions.email}"
+}
+
+resource "google_project_iam_member" "github_actions_sa_user" {
+  project = var.project_id
+  role    = "roles/iam.serviceAccountUser"
+  member  = "serviceAccount:${google_service_account.github_actions.email}"
+}
+
+resource "google_project_iam_member" "github_actions_cloudsql_admin" {
+  project = var.project_id
+  role    = "roles/cloudsql.admin"
+  member  = "serviceAccount:${google_service_account.github_actions.email}"
+}
+
+resource "google_project_iam_member" "github_actions_storage_admin" {
+  project = var.project_id
+  role    = "roles/storage.objectAdmin"
+  member  = "serviceAccount:${google_service_account.github_actions.email}"
+}
