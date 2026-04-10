@@ -8,9 +8,8 @@ on:
 
 env:
   REGION: europe-west1
-  REPO: watchlist-backend-rishi
+  REPO: movies-watchlist-repo-rishi
   IMAGE: movie-watchlist-backend
-  SERVICE: movies-server-rishi
 
 jobs:
   build-and-test:
@@ -24,7 +23,6 @@ jobs:
           node-version: 20
 
       - run: npm ci
-
 
   deploy:
     runs-on: ubuntu-latest
@@ -53,19 +51,20 @@ jobs:
             .
           docker push ${{ env.REGION }}-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/${{ env.REPO }}/${{ env.IMAGE }} --all-tags
 
-      - name: Deploy to Cloud Run
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.9.0
+
+      - name: Terraform Init
+        working-directory: Terraform
+        run: terraform init
+
+      - name: Terraform Apply
+        working-directory: Terraform
         run: |
-          gcloud run deploy ${{ env.SERVICE }} \
-            --image ${{ env.REGION }}-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/${{ env.REPO }}/${{ env.IMAGE }}:${{ github.sha }} \
-            --platform managed \
-            --region ${{ env.REGION }} \
-            --allow-unauthenticated \
-            --set-env-vars "\
-              DB_NAME=${{ secrets.DB_NAME }},\
-              DB_USER=${{ secrets.DB_USER }},\
-              DB_PASSWORD=${{ secrets.DB_PASSWORD }},\
-              DB_HOST=${{ secrets.DB_HOST }},\
-              DB_PORT=${{ secrets.DB_PORT }},\
-              DB_DIALECT=${{ secrets.DB_DIALECT }},\
-              TMDB_BEARER_TOKEN=${{ secrets.TMDB_BEARER_TOKEN }},\
-              NODE_ENV=production"
+          terraform apply -auto-approve \
+            -var="project_id=${{ secrets.GCP_PROJECT_ID }}" \
+            -var="db_password=${{ secrets.DB_PASSWORD }}" \
+            -var="jwt_secret=${{ secrets.JWT_SECRET }}" \
+            -var="tmdb_bearer_token=${{ secrets.TMDB_BEARER_TOKEN }}"
