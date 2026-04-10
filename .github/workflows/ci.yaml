@@ -8,9 +8,9 @@ on:
 
 env:
   REGION: europe-west1
-  REPO: watchlist-backend
-  IMAGE: recipes-api
-  SERVICE: recipes-api
+  REPO: watchlist-backend-rishi
+  IMAGE: movie-watchlist-backend
+  SERVICE: movies-server-rishi
 
 jobs:
   build-and-test:
@@ -67,5 +67,5 @@ jobs:
               DB_HOST=${{ secrets.DB_HOST }},\
               DB_PORT=${{ secrets.DB_PORT }},\
               DB_DIALECT=${{ secrets.DB_DIALECT }},\
-              JWT_SECRET=${{ secrets.JWT_SECRET }},\
+              TMDB_BEARER_TOKEN=${{ secrets.TMDB_BEARER_TOKEN }},\
               NODE_ENV=production"
